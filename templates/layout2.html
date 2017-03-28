@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link href='http://fonts.gooelapis.com/css?family=Open+Sans:300,400,600'
+ rel='stylesheet'>
+	<link rel="stylesheet" media="screen" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" media="screen" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+    <body>
+        <header>
+        <div class="container">
+            <h1 class="title">Network Automation App</h1>
+        </div>
+        </header>
+        {% if tnresponse == 200 %} 
+            <div class="alert alert-success"> 
+               <strong>Success!</strong> 
+            </div> 
+         {% endif %}
+
+
+        {% block content %}
+        {% endblock %}
+    </body>
+    <script type="text/javascript" src="/static/js/code.js"></script>
+</html>
+
+

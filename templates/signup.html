@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <main class="container signup-section">
+        <div class="section-content">
+         <h2> Sign Up</h2>
+         
+         <form name="myForm" method="POST" action="/signup">
+           {{ form.hidden_tag() }}
+         
+           <div class="form-group">
+             {{ form.first_name.label }}
+             {{ form.first_name }}
+             {% if form.first_name.errors %} 
+                {% for error in form.first_name.errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+              {% endif %}
+           </div>
+
+           {{ form.submit(class="btn-primary")}}
+         </form>
+         </div>
+      </main> 
+{% endblock %}

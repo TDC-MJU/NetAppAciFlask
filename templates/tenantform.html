@@ -1,0 +1,27 @@
+{% extends "layout2.html" %}
+{% block content %}
+
+    <main class="container">
+	 <div class="form-group">
+         <h2> Create a Tenant</h2>
+         
+         <form name="form" method="POST" action="/tenant">
+           {{ form.hidden_tag() }}
+         
+           <div class="form-group">
+             <label for="example-text-input" class="col-2 col-form2-label">{{ form.tenant_name.label }}</label>
+                  {{ form.tenant_name }}
+             {% if form.tenant_name.errors %} 
+                {% for error in form.tenant_name.errors %}
+                   <p class="p-tenant-bad">{{ error }}</p>
+                {% endfor %}
+              {% endif %}
+           </div>
+
+           {{ form.submit(class="btn-primary")}}
+        </form>
+            {{ tnresponse }}
+         </div>
+    
+      </main> 
+{% endblock %}

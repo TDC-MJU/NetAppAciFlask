@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" media="screen" href="{{ url_for('static', filename='css/csvform.css') }}">
+        
+    </head>
+    <body>
+        <header>
+        <div class="headclass">
+            <h1 class="title">ACI Automation Script</h1>
+        </div>
+        </header>
+        <main class="mainsec">
+        <div class ="container">
+         <div class="formdiv">
+         
+         <form name="form" method="POST" action="/csvscript" enctype="multipart/form-data">
+           {{ form.hidden_tag() }}
+             <p>Upload CSV File</p>
+             {{form.csv_file.label}}
+             {{form.csv_file}}
+             <br><br>
+
+           {{ form.submit(class="btn-primary")}}
+        </form>
+        </div>
+        <div class="formanswer">
+        {% if form.csv_file.data %} 
+            <p class="p-tenant-bad">{{ form.csv_file.meta }}</p>
+        {% endif %}
+        </div>
+      </main>
+        <script src="../static/js/jquery-3.2.0.js"></script> 
+      </div>
+    </body>
+</html>

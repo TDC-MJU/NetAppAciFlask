@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" media="screen" href="{{ url_for('static', filename='css/dmvpn.css') }}">
+        
+    </head>
+    <body>
+        <header>
+        <div class="headclass">
+            <h1 class="title">DMVPN App</h1>
+        </div>
+        </header>
+        <main class="mainsec">
+         <div class="formdiv">
+         
+         <form name="form" method="POST" action="/dmvpn">
+           {{ form.hidden_tag() }}
+             <p>Choose Data Center</p>
+             <select name="DataCenter">
+                 <option value="Chicago">Chicago</option>
+                 <option value="Piscataway">Piscataway</option>
+             </select>
+             <br><br>
+             <select name="Service">
+                 <option value="InService">In Service</option>
+                 <option value="OutService">Out of Service</option>
+             </select>
+             <br><br>
+
+           {{ form.submit(class="btn-primary")}}
+        </form>
+        </div>
+        <div class="formanswer">
+        </div>
+      </main>
+        <script src="../static/js/jquery-3.2.0.js"></script> 
+    </body>
+</html>
