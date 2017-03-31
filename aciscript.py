@@ -4,10 +4,10 @@ import requests
 
 
 def createTenant(ui_tenant):
-	aciUrl = 'https://10.2.21.230/api/'
+	aciUrl = 'https://URL/api/'
 
 	# create credentials structure
-	loginCred = {'aaaUser': {'attributes': {'name': 'admin', 'pwd': 'acilab1234'}}}
+	loginCred = {'aaaUser': {'attributes': {'name': 'admin', 'pwd': 'pwd'}}}
 	jsonLoginCred = json.dumps(loginCred)
 
 	# log in to API
@@ -51,7 +51,7 @@ def createTenant(ui_tenant):
 
 
 def createsvpool():
-    aciUrl = 'https://10.2.21.230/api/'
+    aciUrl = 'https://URL/api/'
 
 # create credentials structure
     loginCred = {'aaaUser': {'attributes': {'name': 'admin', 'pwd': 'acilab1234'}}}
