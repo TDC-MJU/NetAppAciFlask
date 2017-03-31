@@ -7,10 +7,10 @@ import re
 import threading
 
 
-username = 'netmri'
-password = 'N3t!mri2011'
-ch3 = '10.222.241.53'
-ps2 = '10.221.241.115'
+username = 'user'
+password = 'pass'
+ch3 = 'ip'
+ps2 = 'ip'
 
 ps2outl = ['route-map ToDMVPN permit 5','set community 65111:50']
 ch3outl = ['route-map ToDMVPN permit 5','set community 65112:50']
