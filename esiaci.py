@@ -269,8 +269,8 @@ def acilogin():
 	# Login to ACI
 
 	userid = 'admin'
-	passwd = 'acilab1234'
-	ipaddress = 'https://10.2.21.230'
+	passwd = 'password'
+	ipaddress = 'https:url'
 
 
 
